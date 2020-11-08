@@ -17,4 +17,4 @@ A basic ui that is written in Angular 9.
 
 To install dependencies run "npm install" in root directory.
 
-To run execute ng serve in root.
+To run execute "ng serve" in root.

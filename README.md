@@ -13,4 +13,8 @@ On startup a swagger definition page will show.
 Metrics are created using prometheus and can be found on /metrics
 
 ## UI
-A very basic ui that is written in Angular 9
+A basic ui that is written in Angular 9.
+
+To install dependencies run "npm install" in root directory.
+
+To run execute ng serve in root.

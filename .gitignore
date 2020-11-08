@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Phonebook.API/Phonebook.API/Phonebook.Repositories.Tests/obj

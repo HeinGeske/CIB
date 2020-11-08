@@ -3,3 +3,27 @@
 ################################################################################
 
 /Phonebook.API/Phonebook.API/Phonebook.Repositories.Tests/obj
+/Phonebook.API/Phonebook.API/Phonebook.Repositories.Tests/bin/Debug/netcoreapp3.1
+/Phonebook.API/Phonebook.API/Phonebook.Repositories/obj
+/Phonebook.API/Phonebook.API/Phonebook.Repositories/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Models/obj
+/Phonebook.API/Phonebook.API/Phonebook.Models/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Middleware/obj
+/Phonebook.API/Phonebook.API/Phonebook.Middleware/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Metrics/obj
+/Phonebook.API/Phonebook.API/Phonebook.Metrics/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Helpers/obj
+/Phonebook.API/Phonebook.API/Phonebook.Helpers/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Data/obj
+/Phonebook.API/Phonebook.API/Phonebook.Data/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Controller.Tests/obj
+/Phonebook.API/Phonebook.API/Phonebook.Controller.Tests/bin/Debug/netcoreapp3.1
+/Phonebook.API/Phonebook.API/Phonebook.Components/obj
+/Phonebook.API/Phonebook.API/Phonebook.Components/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.Attributes/obj
+/Phonebook.API/Phonebook.API/Phonebook.Attributes/bin/Debug/netstandard2.0
+/Phonebook.API/Phonebook.API/Phonebook.API/obj
+/Phonebook.API/Phonebook.API/Phonebook.API/bin/Debug/netcoreapp3.1
+/Phonebook.API/Phonebook.API/packages
+/Phonebook.API/Phonebook.API/.vs
+/Phonebook.UI/phonebook-ui/node_modules

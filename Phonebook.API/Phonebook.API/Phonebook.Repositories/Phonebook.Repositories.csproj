@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Phonebook.Data\Phonebook.Data.csproj" />
+    <ProjectReference Include="..\Phonebook.Models\Phonebook.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -44,7 +44,11 @@ namespace Phonebook.Controller.Tests
         [Fact]
         public async Task GetSearch()
         {
-            IActionResult result = await _entryController.GetSearch(_phonebookId, _searchName);
+            IActionResult result = await _entryController.SearchEntries(new SearchEntriesModel()
+            {
+                PhonebookId = _phonebookId,
+                Search = _searchName
+            });
             OkObjectResult okResult = result as OkObjectResult;
             Assert.Equal(200, okResult.StatusCode);
         }

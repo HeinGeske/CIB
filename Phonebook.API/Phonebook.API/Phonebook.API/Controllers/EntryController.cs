@@ -21,16 +21,6 @@ namespace Phonebook.API.Controllers
             _entryComponent = entryComponent;
         }
 
-        [HttpGet]
-        [Route("GetSearch")]
-        public async Task<IActionResult> GetSearch(int id, string search)
-        {
-            return Ok(new ApiResponseModel<List<EntryModel>>()
-            {
-                Result = await _entryComponent.GetEntriesFiltered(id,search),
-                StatusCode = (int)HttpStatusCode.OK,
-            });
-        }
         [HttpPost]
         [Route("SearchEntries")]
         public async Task<IActionResult> SearchEntries(SearchEntriesModel model)

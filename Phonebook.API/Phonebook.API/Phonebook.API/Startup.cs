@@ -21,12 +21,13 @@ namespace Phonebook.API
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+        bool _useInMemory;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _useInMemory = Configuration.GetValue<bool>("UseInMemory");
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -74,20 +75,27 @@ namespace Phonebook.API
         }
         private void SeedDatabase(IApplicationBuilder app)
         {
+           
+
             using (IServiceScope serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 PhonebookContext context = serviceScope.ServiceProvider.GetService<PhonebookContext>();
-                PhonebookContextSeed.SeedAsync(context).Wait();
+                PhonebookContextSeed.SeedAsync(context,0, _useInMemory).Wait();
             }
         }
         private void RegisterDatabase(IServiceCollection services)
         {
-            services.AddDbContext<PhonebookContext>(c =>
-            c.UseInMemoryDatabase("PhonebookConnection"));
-
-            //services.AddDbContext<PhonebookContext>(c =>
-            //    c.UseSqlServer(Configuration.GetConnectionString("PhonebookDB")));
-        }
+            if (_useInMemory)
+            {
+                services.AddDbContext<PhonebookContext>(c =>
+                c.UseInMemoryDatabase("PhonebookConnection"));
+            }
+            else
+            {
+                services.AddDbContext<PhonebookContext>(c =>
+                    c.UseSqlServer(Configuration.GetConnectionString("PhonebookDB")));
+            }
+            }
         private void RegisterServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(EntryProfile));

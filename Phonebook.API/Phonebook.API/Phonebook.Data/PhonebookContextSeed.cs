@@ -1,4 +1,5 @@
-﻿using Phonebook.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Phonebook.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +9,18 @@ namespace Phonebook.Data
 {
     public class PhonebookContextSeed
     {
-        public static async Task SeedAsync(PhonebookContext context, int? retry = 0)
+        public static async Task SeedAsync(PhonebookContext context, int? retry = 0, bool useInMemory = true)
         {
             int retryForAvailability = retry.Value;
 
             try
             {
                 // TODO: Only run this if using a real database
-                //context.Database.Migrate();
-                //context.Database.EnsureCreated();
+                if (!useInMemory)
+                {
+                    context.Database.Migrate();
+                    context.Database.EnsureCreated();
+                }
 
                 if (!context.Phonebooks.Any())
                 {
